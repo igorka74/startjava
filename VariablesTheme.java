@@ -17,7 +17,7 @@ public class VariablesTheme {
         System.out.println("Версия SMBIOS: " + smbiosVersion);
         System.out.println("Общий объём виртуальной памяти: " + totalVirtualMemorySize + " Gb");
         System.out.println("Первая буква названия производителя компьютера: " 
-            + computerBrandFirstLetter);
+                + computerBrandFirstLetter);
         System.out.println("Это мощный компьютер? Ответ: " + isPowerfulComputer + "\n");
 
         System.out.println("2. Расчет стоимости товара со скидкой\n");
@@ -43,35 +43,37 @@ public class VariablesTheme {
         int maxInt = 2147483647;
         long maxLong = Long.MAX_VALUE;
         System.out.println("Первоначальное значение типа byte: " + maxByte 
-            + " , значение после инкремента на единицу: " + ++maxByte 
-            + " , значение после декремента на единицу: " + --maxByte);
+                + "\n , значение после инкремента на единицу: " + ++maxByte 
+                + "\n , значение после декремента на единицу: " + --maxByte);
         System.out.println("Первоначальное значение типа short: " + maxShort 
-            + " , значение после инкремента на единицу: " + ++maxShort 
-            + " , значение после декремента на единицу: " + --maxShort);
+                + "\n , значение после инкремента на единицу: " + ++maxShort 
+                + "\n , значение после декремента на единицу: " + --maxShort);
         System.out.println("Первоначальное значение типа int: " + maxInt 
-            + " , значение после инкремента на единицу: " + ++maxInt 
-            + " , значение после декремента на единицу: " + --maxInt);
+                + "\n , значение после инкремента на единицу: " + ++maxInt 
+                + "\n , значение после декремента на единицу: " + --maxInt);
         System.out.println("Первоначальное значение типа long: " + maxLong 
-            + " , значение после инкремента на единицу: " + ++maxLong 
-            + " , значение после декремента на единицу: " + --maxLong + "\n");
+                + "\n , значение после инкремента на единицу: " + ++maxLong 
+                + "\n , значение после декремента на единицу: " + --maxLong + "\n");
 
         System.out.println("5. Перестановка значений переменных\n");
-        System.out.println("Перестановка значений переменных с помощью третьей переменной:\n");
         int a = 2;
         int b = 5;
+        System.out.println("Начальные значения:");
+        System.out.println(a + " и " + b + "\n");
+        System.out.println("Перестановка значений переменных с помощью третьей переменной:");
         int swap = b;
         b = a;
         a = swap;
         System.out.println(a + " и " + b + "\n");
-        System.out.println("Перестановка значений переменных с помощью арифметических операций:\n");
-        a = a + b;
+        System.out.println("Перестановка значений переменных с помощью арифметических операций:");
+        a += b;
         b = a - b;
-        a = a - b;
+        a -= b;
         System.out.println(a + " и " + b + "\n");
-        System.out.println("Перестановка значений переменных с помощью побитовой операции:\n");
-        a = a ^ b;
-        b = b ^ a;
-        a = a ^ b;
+        System.out.println("Перестановка значений переменных с помощью побитовой операции:");
+        a ^= b;
+        b ^= a;
+        a ^= b;
         System.out.println(a + " и " + b + "\n");
 
         System.out.println("6. Вывод символов и их кодов\n");
@@ -83,8 +85,8 @@ public class VariablesTheme {
         System.out.println("Код символа: " + (int) dollar + " Отображение символа: " + dollar);
         System.out.println("Код символа: " + (int) asterisk + " Отображение символа: " + asterisk);
         System.out.println("Код символа: " + (int) atSign + " Отображение символа: " + atSign);
-        System.out.println("Код символа: " + (int) verticalBar + " Отображение символа: " 
-            + verticalBar);
+        System.out.println("Код символа: " + (int) verticalBar + 
+                " Отображение символа: " + verticalBar);
         System.out.println("Код символа: " + (int) tilde + " Отображение символа: " + tilde + "\n");
 
         System.out.println("7. Вывод в консоль ASCII-арт Дюка\n");
@@ -95,27 +97,27 @@ public class VariablesTheme {
         char slash = '/'; 
         char backSlash = '\\'; 
         System.out.println(space + space + space + space + slash + backSlash + space + space 
-            + space + space);
+                + space + space);
         System.out.println(space + space + space + slash + space + space + backSlash + space 
-            + space + space);
+                + space + space);
         System.out.println(space + space + slash + underScore + leftParenthesis + space 
-            + rightParenthesis + backSlash + space + space);
+                + rightParenthesis + backSlash + space + space);
         System.out.println(space + slash + space + space + space + space + space + space 
-            + backSlash + space);
-        System.out.println(String.valueOf(slash) + underScore + underScore + underScore + 
-            underScore + slash + backSlash + underScore + underScore + backSlash + "\n");
+                + backSlash + space);
+        System.out.println("" + slash+ underScore + underScore + underScore + 
+                underScore + slash + backSlash + underScore + underScore + backSlash + "\n");
 
         System.out.println("8. Вывод количества сотен, десятков и единиц числа\n");
         int num = 123;
         int hundreds = (num / 100) % 10;
-        int dozens = (num / 10) % 10;
-        int units = num % 10;
-        System.out.println(num);
-        System.out.println(hundreds);
-        System.out.println(dozens);
-        System.out.println(units);
-        System.out.println(hundreds + dozens + units);
-        System.out.println(hundreds * dozens * units + "\n");
+        int tens = (num / 10) % 10;
+        int ones = num % 10;
+        System.out.println("Число " + num + " содержит:");
+        System.out.println("Сотен - " + hundreds);
+        System.out.println("Десятков - " + tens);
+        System.out.println("Единиц - " + ones);
+        System.out.println("Сумма его цифр = " + (hundreds + tens + ones));
+        System.out.println("Произведение его цифр = " + hundreds * tens * ones + "\n");
 
         System.out.println("9. Вывод времени\n");
         int time = 86399;
