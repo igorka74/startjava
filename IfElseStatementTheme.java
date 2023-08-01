@@ -2,29 +2,26 @@ public class IfElseStatementTheme {
 
     public static void main(String[] args) {
         System.out.println("1. Перевод псевдокода на язык Java");
-        int male = 1;
-        int female = 0;
-        int sex = female;
-        int age = 22;
-        double height = 1.6;
-        String name = "Михаил";
-        char firstNameLetter = name.charAt(0);
-        if(sex != male) {
+        boolean isMale = false;
+        if (!isMale) {
             System.out.println("Пол - женский");
         } else {
-            System.out.println("Пол - мужскойй\n");
+            System.out.println("Пол - мужской\n");
         }
-        if(age > 18) {
+        int age = 22;
+        if (age > 18) {
             System.out.println("Можно водить машину");
         } else {
             System.out.println("Нельзя водить машину\n");
         }
-        if(height < 1.8) {
+        double height = 1.6;
+        if (height < 1.8) {
             System.out.println("Рост не подходит для баскетбола");
         } else {
             System.out.println("Рост подходит для баскетбола");
         }
-        if(firstNameLetter == 'М') {
+        char firstNameLetter = "Михаил".charAt(0);
+        if (firstNameLetter == 'М') {
             System.out.println("Возможно, вас зовут Михаил\n");
         } else {
             System.out.println("Вас точно зовут не Михаил\n");
@@ -33,7 +30,7 @@ public class IfElseStatementTheme {
         System.out.println("2. Поиск большего числа");
         int a = 11;
         int b = 15;
-        if(a > b) {
+        if (a > b) {
             System.out.println("a больше b\n");
         } else if (a == b) {
             System.out.println("a равно b\n");
@@ -48,7 +45,7 @@ public class IfElseStatementTheme {
         boolean isZero = (num == 0);
         boolean isPositive = (num > 0);
         boolean isEven = (num % 2 == 0);
-        if(isZero) {
+        if (isZero) {
             System.out.println("Число равно нолю\n");
         } else if(isPositive) {
             if(isEven) {
