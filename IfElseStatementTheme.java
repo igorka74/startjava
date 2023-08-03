@@ -6,13 +6,13 @@ public class IfElseStatementTheme {
         if (!isMale) {
             System.out.println("Пол - женский");
         } else {
-            System.out.println("Пол - мужской\n");
+            System.out.println("Пол - мужской");
         }
         int age = 22;
         if (age > 18) {
             System.out.println("Можно водить машину");
         } else {
-            System.out.println("Нельзя водить машину\n");
+            System.out.println("Нельзя водить машину");
         }
         double height = 1.6;
         if (height < 1.8) {
@@ -22,102 +22,77 @@ public class IfElseStatementTheme {
         }
         char firstNameLetter = "Михаил".charAt(0);
         if (firstNameLetter == 'М') {
-            System.out.println("Возможно, вас зовут Михаил\n");
+            System.out.println("Возможно, вас зовут Михаил");
         } else {
-            System.out.println("Вас точно зовут не Михаил\n");
+            System.out.println("Вас точно зовут не Михаил");
         }
 
-        System.out.println("2. Поиск большего числа");
+        System.out.println("\n2. Поиск большего числа");
         int a = 11;
         int b = 15;
         if (a > b) {
-            System.out.println("a больше b\n");
-        } else if (a == b) {
-            System.out.println("a равно b\n");
+            System.out.println("a больше b");
+        } else if (a < b) {
+            System.out.println("a меньше b");
         } else { 
-            {
-                System.out.println("a меньше b\n");
-            }
+            System.out.println("a равно b");
         }
 
-        System.out.println("3. Проверка числа");
-        int num = -11;
-        boolean isZero = (num == 0);
-        boolean isPositive = (num > 0);
-        boolean isEven = (num % 2 == 0);
-        if (isZero) {
-            System.out.println("Число равно нолю\n");
-        } else if(isPositive) {
-            if(isEven) {
-                System.out.println("Число " + num 
-                        + " является положительным и четным\n");
+        System.out.println("\n3. Проверка числа");
+        int num = -10;
+        System.out.print("Число " + num + " является ");
+        if (num == 0) {
+            System.out.println("равным нолю");
+        } else if(num > 0) {
+            if(num % 2 == 0) {
+                System.out.println("положительным и четным");
             } else {
-                System.out.println("Число " + num + " является положительным и нечетным\n");
+                System.out.println("положительным и нечетным");
             }
         } else {
-            if(isEven) {
-                System.out.println("Число " + num + " является отрицательным и четным\n");
+            if(num % 2 != 0) {
+                System.out.println("отрицательным и нечетным");
             } else {
-                System.out.println("Число " + num + " является отрицательным и нечетным\n");
+                System.out.println("отрицательным и четным");
             }
         }
 
-        System.out.println("4. Поиск одинаковых цифр в числах");
+        System.out.println("\n4. Поиск одинаковых цифр в числах");
         int num1 = 123;
         int num2 = 223;
         int ones = num1 % 10;
         int tens = (num1 / 10) % 10;
-        int hundreds = (num2 / 100) % 10;
+        int hundreds = (num1 / 100) % 10;
         boolean sameDigitInOnes = (num1 % 10) == (num2 % 10);
         boolean sameDigitInTens = ((num1 / 10) % 10) == ((num2 / 10) % 10);
         boolean sameDigitInHundreds = ((num1 / 100) % 10) == ((num2 / 100) % 10);
         if (!sameDigitInHundreds && !sameDigitInTens && !sameDigitInOnes) {
             System.out.println("Одинаковых цифр ни в одном разряде нет");
-        } else if (sameDigitInOnes && sameDigitInTens && sameDigitInHundreds) {
-            System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
-                    + ones + " в 1 разряде" + " , одинаковую цифру " 
-                    + tens + " во 2 разряде" + " , одинаковую цифру " 
-                    + hundreds + " в 3 разряде");
-        } else if (sameDigitInOnes && sameDigitInTens) {
-            System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
-                    + ones + " в 1 разряде и одинаковую цифру " 
-                    + tens + " во 2 разряде ");
-        } else if (sameDigitInOnes && sameDigitInHundreds) {
-            System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
-                    + ones + " в 1 разряде и одинаковую цифру " 
-                    + hundreds + " в 3 разряде");
-        } else if (sameDigitInTens && sameDigitInHundreds) {
-            System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
-                    + tens + " во 2 разряде  и одинаковую цифру " 
-                    + hundreds + " в 3 разряде");
-        } else if (sameDigitInOnes) {
+        }
+        if (sameDigitInOnes) {
             System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
                     + ones + " в 1 разряде");
-        } else if (sameDigitInTens) {
+        }
+        if (sameDigitInTens) {
             System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
-                    + tens + " во 2 разряде");
-        } else if (sameDigitInHundreds) {
+                    + tens + " во 2 разряде ");
+        }
+        if (sameDigitInHundreds) {
             System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
                     + hundreds + " в 3 разряде");
         }
 
         System.out.println("\n5. Определение символа по его коду");
         char testChar = '\u0057';
-        char sign = (char) testChar;
-        if ((int) testChar >= 0 && (int) testChar < 48) {
-            System.out.println("Символ " + testChar + " не является буквой или цифрой");
-        } else if ((int) testChar >= 48 && (int) testChar < 58) {
-            System.out.println("Символ " + testChar + " является цифрой");
-        } else if ((int) testChar >= 58 && (int) testChar < 65) {
-            System.out.println("Символ " + testChar + " не является буквой или цифрой");
-        } else if ((int) testChar >= 65 && (int) testChar < 91) {
-            System.out.println("Символ " + testChar + " является большой буквой");
-        } else if ((int) testChar >= 91 && (int) testChar < 97) {
-            System.out.println("Символ " + testChar + " не является буквой или цифрой");
-        } else if ((int) testChar >= 97 && (int) testChar < 123) {
-            System.out.println("Символ " + testChar + " является маленькой буквой");
-        } else if ((int) testChar >= 123 && (int) testChar <= 127) {
-            System.out.println("Символ " + testChar + " не является буквой или цифрой");
+        System.out.print("Символ " + testChar + " является ");
+        if (testChar >= '0' && testChar <= '9' ) {
+            System.out.println("цифрой");
+        } else if (testChar >= 'A' && testChar <= 'Z') {
+            System.out.println("большой буквой");
+        } else if (testChar >= 'a' && testChar <= 'z') {
+            System.out.println("маленькой буквой");
+        } else {
+            System.out.println("не буквой и не цифрой");
         }
 
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
