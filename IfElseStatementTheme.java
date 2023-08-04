@@ -43,44 +43,44 @@ public class IfElseStatementTheme {
         System.out.print("Число " + num + " является ");
         if (num == 0) {
             System.out.println("равным нолю");
-        } else if(num > 0) {
-            if(num % 2 == 0) {
-                System.out.println("положительным и четным");
-            } else {
-                System.out.println("положительным и нечетным");
-            }
         } else {
-            if(num % 2 != 0) {
-                System.out.println("отрицательным и нечетным");
+            if (num > 0) {
+                System.out.print("положительным");
             } else {
-                System.out.println("отрицательным и четным");
+                System.out.print("отрицательным");
+        }
+            if (num % 2 != 0) {
+                System.out.print(" и нечетным");
+            } else {
+            System.out.print(" и четным");
             }
         }
 
-        System.out.println("\n4. Поиск одинаковых цифр в числах");
-        int num1 = 123;
-        int num2 = 223;
+        System.out.println("\n\n4. Поиск одинаковых цифр в числах");
+        int num1 = 423;
+        int num2 = 421;
         int ones = num1 % 10;
         int tens = (num1 / 10) % 10;
         int hundreds = (num1 / 100) % 10;
-        boolean sameDigitInOnes = (num1 % 10) == (num2 % 10);
-        boolean sameDigitInTens = ((num1 / 10) % 10) == ((num2 / 10) % 10);
-        boolean sameDigitInHundreds = ((num1 / 100) % 10) == ((num2 / 100) % 10);
-        if (!sameDigitInHundreds && !sameDigitInTens && !sameDigitInOnes) {
+        boolean isEqualOnes = (num1 % 10) == (num2 % 10);
+        boolean isEqualTens = ((num1 / 10) % 10) == ((num2 / 10) % 10);
+        boolean isEqualHundreds = ((num1 / 100) % 10) == ((num2 / 100) % 10);
+        if (!isEqualHundreds && !isEqualTens && !isEqualOnes) {
             System.out.println("Одинаковых цифр ни в одном разряде нет");
-        }
-        if (sameDigitInOnes) {
-            System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
-                    + ones + " в 1 разряде");
-        }
-        if (sameDigitInTens) {
-            System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
-                    + tens + " во 2 разряде ");
-        }
-        if (sameDigitInHundreds) {
-            System.out.println("Числа " + num1 + " и " + num2 + " содержат одинаковую цифру " 
-                    + hundreds + " в 3 разряде");
-        }
+        } else {
+            if (isEqualOnes) {
+                System.out.println("Числа " + num1 + " и " + num2 +
+                        " содержат одинаковую цифру " + ones + " в 1 разряде");
+            }
+            if (isEqualTens) {
+                System.out.println("Числа " + num1 + " и " + num2 + 
+                        " содержат одинаковую цифру " + tens + " во 2 разряде ");
+            }
+            if (isEqualHundreds) {
+                System.out.println("Числа " + num1 + " и " + num2 +
+                        " содержат одинаковую цифру " + hundreds + " в 3 разряде");
+            }
+        } 
 
         System.out.println("\n5. Определение символа по его коду");
         char testChar = '\u0057';
@@ -97,44 +97,29 @@ public class IfElseStatementTheme {
 
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
         double deposit = 301000.00;
-        double profit;
-        double lowProfit = 0.05;
-        double mediumProfit = 0.07;
-        double highProfit = 0.1;
-        if (deposit < 100000.00) {
-            profit = deposit * lowProfit;
-            System.out.println("Сумма вклада: " + deposit + 
-                    " руб.\nНачисленные проценты: " + profit + 
-                    " руб.\nОбщая сумма с процентами:" + (deposit + profit) + " руб.");
-        } else if (deposit >= 100000.00 && deposit <= 300000.00) {
-            profit = deposit * mediumProfit;
-            System.out.println("Сумма вклада: " + deposit + 
-                    " руб.\nНачисленные проценты: " + profit + 
-                    " руб.\nОбщая сумма с процентами:" + (deposit + profit) + " руб.");
+        double profit = 0.5;
+        if (deposit >= 100000.00 && deposit <= 300000.00) {
+            profit = 0.7;
         } else if (deposit > 300000.00) {
-            profit = deposit * highProfit;
-            System.out.println("Сумма вклада: " + deposit + 
-                    " руб.\nНачисленные проценты: " + profit + 
-                    " руб.\nОбщая сумма с процентами:" + (deposit + profit) + " руб.");
+            profit = 0.1;
         }
+        System.out.println("Сумма вклада: " + deposit + 
+                " руб.\nНачисленные проценты: " + deposit * profit + 
+                " руб.\nОбщая сумма с процентами: " + (deposit + (deposit * profit)) + " руб.");
 
         System.out.println("\n7. Определение оценки по предметам");
-        int historyScore = 0;
-        int codingScore = 0;
+        int historyScore = 2;
         int historyPoints = 59;
-        int codingPoints = 92;
-        if (historyPoints <= 60) {
-            historyScore = 2;
-        } else if (historyPoints > 60 && historyPoints < 73) {
+        if (historyPoints > 60 && historyPoints < 73) { 
             historyScore = 3;
         } else if (historyPoints >= 73 && historyPoints <= 91) {
             historyScore = 4;
         } else if (historyPoints > 91) {
             historyScore = 5;
         }
-        if (codingPoints <= 60) {
-            codingScore = 2;
-        } else if (codingPoints > 60 && codingPoints < 73) {
+        int codingScore = 2;
+        int codingPoints = 92;
+        if (codingPoints > 60 && codingPoints < 73) {
             codingScore = 3;
         } else if (codingPoints >= 73 && codingPoints <= 91) {
             codingScore = 4;
