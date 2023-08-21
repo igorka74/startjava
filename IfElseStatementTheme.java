@@ -42,16 +42,16 @@ public class IfElseStatementTheme {
         int num = -10;
         System.out.print("Число " + num + " является ");
         if (num == 0) {
-            System.out.println("равным нолю");
+            System.out.println(num);
         } else {
             if (num > 0) {
                 System.out.print("положительным");
             } else {
                 System.out.print("отрицательным");
         }
-            if (num % 2 != 0) {
-                System.out.print(" и нечетным");
-            } else {
+        if (num % 2 != 0) {
+            System.out.print(" и нечетным");
+        } else {
             System.out.print(" и четным");
             }
         }
