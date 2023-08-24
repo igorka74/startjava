@@ -48,11 +48,11 @@ public class IfElseStatementTheme {
                 System.out.print("положительным");
             } else {
                 System.out.print("отрицательным");
-        }
-        if (num % 2 != 0) {
-            System.out.print(" и нечетным");
-        } else {
-            System.out.print(" и четным");
+            }
+            if (num % 2 != 0) {
+                System.out.print(" и нечетным");
+            } else {
+                System.out.print(" и четным");
             }
         }
 
